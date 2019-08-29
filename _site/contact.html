@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+  <title></title>
 
   <meta itemprop="description" name="description"
-    content="{% if page.description %}{{ page.description }}{% else %}{{ site.name }}{% endif %}" />
+    content="" />
   <meta name="keywords"
-    content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.name }} - {{ page.title }}{% endif %}" />
+    content=" - " />
   <meta name="language" content="es-CO" />
   <meta name="country" content="COL" />
   <meta name="theme-color" content="#F96D00" />
@@ -46,9 +46,98 @@
 
 <body>
 
-  {% include nav.html %}
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="/images/logo/logo50.png" alt="">Asados<br><small>El Sazón de
+          Alejo</small></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="index.html" class="nav-link">Inicio</a></li>
+          <li class="nav-item"><a href="menu.html" class="nav-link">Menú</a></li>
+          <li class="nav-item"><a href="services.html" class="nav-link">Servicios</a></li>
+          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">Nuestro Asadero</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contácto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
 
-  {{ content }}
+  <section class="home-slider owl-carousel img" style="background-image: url(images/bg_1.jpg);">
+
+  <div class="slider-item" style="background-image: url(images/bg_3.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row slider-text justify-content-center align-items-center">
+
+        <div class="col-md-7 col-sm-12 text-center ftco-animate">
+          <h1 class="mb-3 mt-5 bread">Contact Us</h1>
+          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Contact</span></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section contact-section">
+  <div class="container mt-5">
+    <div class="row block-9">
+      <div class="col-md-4 contact-info ftco-animate">
+        <div class="row">
+          <div class="col-md-12 mb-4">
+            <h2 class="h4">Contact Information</h2>
+          </div>
+          <div class="col-md-12 mb-3">
+            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+          </div>
+          <div class="col-md-12 mb-3">
+            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+          </div>
+          <div class="col-md-12 mb-3">
+            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+          </div>
+          <div class="col-md-12 mb-3">
+            <p><span>Website:</span> <a href="#">yoursite.com</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-6 ftco-animate">
+        <form action="#" class="contact-form">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="map"></div>
 
   <footer class="ftco-footer ftco-section img">
     <div class="overlay"></div>
