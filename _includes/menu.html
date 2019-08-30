@@ -1,0 +1,79 @@
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section ftco-animate text-center">
+        <h2 class="mb-4">Más de Nuestra Sazón</h2>
+        <p>Tenemos muchas delicias que puedes probar. Disfrútalas todas. Siempre estaremos muy orgullosos de tenerte
+          entre nuestros clientes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-wrap">
+    <div class="row no-gutters d-flex">
+
+      {% for plato in site.data.platos %}
+      <div class="col-lg-4 d-flex ftco-animate">
+        <div class="services-wrap d-flex">
+          <a href="#" class="img" style="background-image: url('{{ plato.img }}');"></a>
+          <div class="text p-4">
+            <h3>{{ plato.title }}</h3>
+            <p>{{ plato.p }}</p>
+            <p class="price"><span>{{ plato.valor }}</span> <a href="{{ site.telefono }}"
+                class="ml-2 btn btn-white btn-outline-white">Reservas</a></p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h2 class="mb-4" id="menu">El Mejor Menú de Pitalito</h2>
+            <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+            <p class="mt-5">El Sazón de Alejo es muy reconocido en la ciudad de Pitalito por sus asados de carne a la
+              llanera y otras delicias más. Mira las opciones que puedes disfrutar. ¿Cuál te gustaría probar?</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            {% for asado in site.data.menu1 %}
+            <div class="pricing-entry d-flex ftco-animate">
+              <div class="img" style="background-image: url('{{ asado.img }}');"></div>
+              <div class="desc pl-3">
+                <div class="d-flex text align-items-center">
+                  <h3><span>{{ asado.title }}</span></h3>
+                  <span class="price">{{ asado.valor }}</span>
+                </div>
+                <div class="d-block">
+                  <p>{{ asado.p }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="col-md-6">
+            {% for asado in site.data.menu2 %}
+            <div class="pricing-entry d-flex ftco-animate">
+              <div class="img" style="background-image: url('{{ asado.img }}');"></div>
+              <div class="desc pl-3">
+                <div class="d-flex text align-items-center">
+                  <h3><span>{{ asado.title }}</span></h3>
+                  <span class="price">{{ asado.valor }}</span>
+                </div>
+                <div class="d-block">
+                  <p>{{ asado.p }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+</section>

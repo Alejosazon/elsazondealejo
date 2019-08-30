@@ -1,0 +1,24 @@
+- img: images/res.jpeg
+  title: Asado de Res
+  p: Deliciosos 350g de carne, papa, yuca y maduro melado, más salsas de la casa.
+  valor: 17000
+
+- img: images/cerdo.jpeg
+  title: Asado de Cerdo
+  p: Deliciosos 350g de carne, papa, yuca y maduro melado, más salsas de la casa.
+  valor: 17000
+
+- img: images/mres.jpeg
+  title: Mixta de Res y Pollo
+  p: Deliciosos 350g de carne y pollo, papa, yuca y maduro melado, más salsas de la casa.
+  valor: 17000
+
+- img: images/mcerdo.jpeg
+  title: Mixta de Cerdo y Pollo
+  p: Deliciosos 350g de carne y pollo, papa, yuca y maduro melado, más salsas de la casa.
+  valor: 17000
+
+- img: images/mrcp.jpg
+  title: Asado Mixto
+  p: Deliciosos 350g de carne de res, cerdo y pollo, papa, yuca y maduro melado, más salsas de la casa.
+  valor: 17000
