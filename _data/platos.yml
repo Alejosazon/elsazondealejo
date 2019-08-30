@@ -1,0 +1,14 @@
+- title: Bandeja Paisa
+  p: Arroz, frijol, carne molida, huevo, arepa, chorizo, chicharrón, aguacate, maduro, limonada y postre.
+  valor: 15000
+  img: images/bp.jpeg
+
+- title: Mojarra Dorada
+  p: Arroz, patacón, ensalada, consomé de pescado o costilla, limonada o jugo, y postre.
+  valor: 12000
+  img: images/mf.jpeg
+
+- title: Arroz con Pollo
+  p: Arroz con pollo desmenusado y verdura picada, papa a la francesa, consomé, ensalada, y limonada.
+  valor: 14000
+  img: images/ap.jpeg

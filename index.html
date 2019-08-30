@@ -13,7 +13,7 @@ layout: default
 						<h2 class="mb-4">Picada Mixta</h2>
 						<p class="mb-4 mb-md-5">La especialidad de nuestros asados. Prueba la Mixta Llanera de res, cerdo, pollo,
 							chorizo y chicharrón.</p>
-						<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Pedidos</a> <a href="#"
+						<p><a href="{{ site.telefono }}" class="btn btn-primary p-3 px-xl-4 py-xl-3">Pedidos</a> <a href="#menu"
 								class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Ver Menú</a></p>
 					</div>
 					<div class="col-md-6 ftco-animate">
@@ -34,7 +34,7 @@ layout: default
 						<span class="subheading">Ejecutivos</span>
 						<h2 class="mb-4">Sancocho de Gallina</h2>
 						<p class="mb-4 mb-md-5">La deliciosa gallina criolla de campo, con nuestra receta familiar.</p>
-						<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Pedidos</a> <a href="#"
+						<p><a href="{{ site.telefono }}" class="btn btn-primary p-3 px-xl-4 py-xl-3">Pedidos</a> <a href="#menu"
 								class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Ver Menú</a></p>
 					</div>
 					<div class="col-md-6 ftco-animate">
@@ -55,7 +55,7 @@ layout: default
 						<h1 class="mb-4">Preparamos la mejor carne asada a la llanera de Pitalito</h1>
 						<p class="mb-4 mb-md-5">Prueba la deliciosa sazón de nuestros asados llaneros, los más famosos de la ciudad
 							de Pitalito.</p>
-						<p><a href="#" class="btn btn-primary p-3 px-xl-4 py-xl-3">Pedidos</a> <a href="#"
+						<p><a href="{{ site.telefono }}" class="btn btn-primary p-3 px-xl-4 py-xl-3">Pedidos</a> <a href="#menu"
 								class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">Ver Menú</a></p>
 					</div>
 
@@ -73,85 +73,35 @@ layout: default
 	<div class="container">
 		<div class="row justify-content-center mb-5 pb-3">
 			<div class="col-md-7 heading-section ftco-animate text-center">
-				<h2 class="mb-4">Hot Pizza Meals</h2>
-				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
-					texts.</p>
+				<h2 class="mb-4">Más de Nuestra Sazón</h2>
+				<p>Tenemos muchas delicias que puedes probar. Disfrútalas todas. Siempre estaremos muy orgullosos de tenerte entre nuestros clientes.</p>
 			</div>
 		</div>
 	</div>
+
 	<div class="container-wrap">
 		<div class="row no-gutters d-flex">
-			<div class="col-lg-4 d-flex ftco-animate">
-				<div class="services-wrap d-flex">
-					<a href="#" class="img" style="background-image: url(images/pizza-1.jpg);"></a>
-					<div class="text p-4">
-						<h3>Italian Pizza</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia </p>
-						<p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 d-flex ftco-animate">
-				<div class="services-wrap d-flex">
-					<a href="#" class="img" style="background-image: url(images/pizza-2.jpg);"></a>
-					<div class="text p-4">
-						<h3>Greek Pizza</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-						<p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 d-flex ftco-animate">
-				<div class="services-wrap d-flex">
-					<a href="#" class="img" style="background-image: url(images/pizza-3.jpg);"></a>
-					<div class="text p-4">
-						<h3>Caucasian Pizza</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-						<p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-					</div>
-				</div>
-			</div>
 
+			{% for plato in site.data.platos %}
 			<div class="col-lg-4 d-flex ftco-animate">
 				<div class="services-wrap d-flex">
-					<a href="#" class="img order-lg-last" style="background-image: url(images/pizza-4.jpg);"></a>
+					<a href="#" class="img" style="background-image: url('{{ plato.img }}');"></a>
 					<div class="text p-4">
-						<h3>American Pizza</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia </p>
-						<p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
+						<h3>{{ plato.title }}</h3>
+						<p>{{ plato.p }}</p>
+						<p class="price"><span>{{ plato.valor }}</span> <a href="{{ site.telefono }}"
+								class="ml-2 btn btn-white btn-outline-white">Pedidos</a></p>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-4 d-flex ftco-animate">
-				<div class="services-wrap d-flex">
-					<a href="#" class="img order-lg-last" style="background-image: url(images/pizza-5.jpg);"></a>
-					<div class="text p-4">
-						<h3>Tomatoe Pie</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-						<p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4 d-flex ftco-animate">
-				<div class="services-wrap d-flex">
-					<a href="#" class="img order-lg-last" style="background-image: url(images/pizza-6.jpg);"></a>
-					<div class="text p-4">
-						<h3>Margherita</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-						<p class="price"><span>$2.90</span> <a href="#" class="ml-2 btn btn-white btn-outline-white">Order</a></p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+			{% endfor %}
 
-	<div class="container">
+	<div class="container" >
 		<div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
 			<div class="col-md-7 heading-section text-center ftco-animate">
-				<h2 class="mb-4">Our Menu Pricing</h2>
+				<h2 class="mb-4" id="menu">Los Mejores Asados Llaneros de Pitalito</h2>
 				<p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
-				<p class="mt-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-					live the blind texts.</p>
+				<p class="mt-5">El Sazón de Alejo es muy reconocido en la ciudad de Pitalito por sus asados de carne a la llanera. Mira las opciones que puedes disfrutar:</p>
 			</div>
 		</div>
 		<div class="row">
