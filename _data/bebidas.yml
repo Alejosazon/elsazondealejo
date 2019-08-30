@@ -1,0 +1,14 @@
+- img: images/jugos.jpg
+  title: Naranjada Natural
+  p: Puedes pedir desde vasos hasta jarra completa.
+  valor: 5000 - 10000
+
+- img: images/gaseosas.jpg
+  title: Gaseosas y Jugos en botella
+  p: Las clásicas marcas que te gustan con tus platos favoritos.
+  valor: 2000 - 8000
+
+- img: images/cerveza.jpg
+  title: Agua y ¡Cerveza!
+  p: Las clásicas marcas que te gustan con tus platos favoritos.
+  valor: 2000 - 8000
